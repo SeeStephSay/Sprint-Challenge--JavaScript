@@ -80,6 +80,10 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i = 0; i < graduates.length; i++) {
+  universities.push(graduates[i].university)
+  universities.sort();
+}
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
@@ -89,10 +93,17 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
+for (let i = 0; i < universities.length; i++) {
+contactInfo.push(graduates[i].first_name + " " + graduates[i].email)
+}
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+for (let i = 0; i < universities.length; i++) {
+unisWithUni.push(graduates[i].university(.includes('uni')));
+
+}
 console.log(unisWithUni);
 
 
@@ -123,7 +134,7 @@ console.log(displayNames);
 
 /* Request 2: .map()
 
-The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
+The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the result.
 
 */
 
