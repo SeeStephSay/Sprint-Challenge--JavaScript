@@ -42,7 +42,7 @@ When you write a function inside of another function, and pass or return it to a
 
 4. Describe the four rules of the 'this' keyword.
 
-Default Binding - Refers to how 'this' is the global context whenever a function is invoked without any other rules. If we aren't using a dot or using call(), apply(), or bind(), our 'this' will be our global object. If we are in the browser, it will be in the window. In strict mode, the it will return undefined.
+Default/Window Binding - Refers to how 'this' is the global context whenever a function is invoked without any other rules. If we aren't using a dot or using call(), apply(), or bind(), our 'this' will be our global object. If we are in the browser, it will be in the window. In strict mode, the it will return undefined.
 
 Implicit Binding - The most common. When a function is invoked, whatever is to the left of the dot is what the 'this' keyword refers to. Implicit means automatic. It only applies to objects with methods. (Occurs when dot notation is used to invoke a function.)
 

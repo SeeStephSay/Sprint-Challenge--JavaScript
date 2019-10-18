@@ -79,7 +79,7 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 for (let i = 0; i < graduates.length; i++) {
-  universities.push(graduates[i].university)
+  universities.push(graduates[i].university);
   universities.sort();
 }
 console.log(universities);
@@ -92,7 +92,7 @@ The resulting contact information strings should have a space between the first 
 Log the result of your new array. */
 const contactInfo = [];
 for (let i = 0; i < universities.length; i++) {
-  contactInfo.push(graduates[i].first_name + " " + graduates[i].email)
+  contactInfo.push(graduates[i].first_name + " " + graduates[i].email);
   }
 console.log(contactInfo);
 
@@ -104,6 +104,7 @@ console.log(contactInfo);
 //   unisWithUni.push(graduates[i].university(.includes('uni')));
 //   }
 // console.log(unisWithUni);
+
 // let unisWithUni = [];
 // graduates.filter(function(graduates) {
 //   if(graduates.university === "Uni") {
@@ -118,14 +119,18 @@ console.log(contactInfo);
 // }
 // console.log(unisWithUni);
 
-let unisWithUni = [];
-for (unis in graduates) {
-  if (graduates[unis].university.match("Uni")) {
-    unisWithUni.push(graduates[unis].university);
-  }
-}
-unisWithUni.sort();
+// let unisWithUni = [];
+// for (unis in graduates) {
+//   if (graduates[unis].university.match("Uni")) {
+//     unisWithUni.push(graduates[unis].university);
+//   }
+// }
+// unisWithUni.sort();
+
+const unisWithUni = graduates.filter(unis => unis.university.includes("Uni") ) 
 console.log(unisWithUni);
+
+
 
 // ==== ADVANCED Array Methods ====
 
@@ -157,7 +162,7 @@ console.log(displayNames);
 
 /* Request 2: .map()
 
-The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
+The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the result.
 
 */
 
@@ -191,10 +196,10 @@ The zoos need to know their total animal population across the United States. Fi
 // console.log(population(zooAnimals), 0);
 
 //THIRD ATTEMPT
-const populationTotal = [];
-zooAnimals.forEach(function(element) {
-  populationTotal.push(element.population);
-})
+// const populationTotal = [];
+// zooAnimals.forEach(function(element) {
+//   populationTotal.push(element.population);
+// });
 
 const total = zooAnimals.reduce((accumulator, animal) => accumulator + animal.population, 0);
 

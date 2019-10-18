@@ -11,7 +11,6 @@ function consume(a, b, cb) {
   return cb(a, b);
 }
 
-console.log(25, 72);
 
 
 /* Step 2: Create several functions to callback with consume();
